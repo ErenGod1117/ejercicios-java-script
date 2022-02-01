@@ -35,7 +35,7 @@ if (pizza == 'personal') {
         }
     
     }
-    if(tipos == 'hawaina'){
+    if(tipos == 'hawaiana'){
         alert('escogiste una pizza personal hawaina')
         let topins =prompt('deseas la pizza sin piña o jamon o salami')
         if (topins == 'jamon'){
@@ -82,7 +82,7 @@ if (pizza == 'familiar') {
         }
     
     }
-    if(tipos == 'hawaina'){
+    if(tipos == 'hawaiana'){
         alert('escogiste una pizza familiar hawaina')
         let topins =prompt('deseas la pizza sin piña o jamon o salami')
         if (topins == 'jamon'){
@@ -128,7 +128,7 @@ if (pizza == 'familiar') {
         }
     
     }
-    if(tipos == 'hawaina'){
+    if(tipos == 'hawaiana'){
         alert('escogiste una pizza mediana hawaina')
         let topins =prompt('deseas la pizza sin piña o jamon o salami')
         if (topins == 'jamon'){
