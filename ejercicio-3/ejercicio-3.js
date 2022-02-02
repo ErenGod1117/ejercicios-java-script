@@ -1,160 +1,243 @@
-let pizza = prompt('ingresa tu pizza si es familiar personal o mediana')
-let mediana
-let familiar
-let personal
-let hawaina
-let polloychampiñones
-let carnes
-let queso
-let salami
-let cabano
-let ninguno
-let jamon
-let piña
-let bordedebocadillo
-let salsa
+const mensaje = prompt('bienvenido a la pizza de eren escribe el tipo de pizza que deseas: "familiar", "personal" o "mediana"')
+
+if (mensaje === 'personal'){
+    let tipopizza = prompt('que sabor deseas de pizza de "champiñones", "hawaiana" o "carnes"')
+
+    if(tipopizza === 'champiñones'){
+        let contenidos = prompt('desea que su pizza personal de champiñones lleve "1-queso" o "2-sin queso"')
+        switch (contenidos) {
+            case '1':
+                alert('su pizza sera una personal de champiñones con queso')
+                break;
+            case '2':
+                let segundocontenido = prompt('desea con "1-borde de bocadillo" o "2-con salsa"')
+                switch (segundocontenido) {
+                    case '1':
+                        alert('su pizza sera una personal de champiñones sin queso con borde de bocadillo')
+                        break;
+                    case '2':
+                        alert('su pizza sera una personal de champiñones sin queso con salsa')
+                        break;
+                
+                    default:
+                    alert('por favor ingrese un valor valido ya sea 1 0 2')
+                        break;
+                }
+                break;
+        
+            default:
+                alert('por favor ingrese un valor valido')
+                break;
+        } 
+    }else if(tipopizza === 'hawaiana'){
+        let contenidos = prompt('desea la pizza con "1-salami" o "2-sin salami"')
+        switch (contenidos) {
+            case '1':
+                let segundocontenido = prompt('desea su pizza personal hawaina con "1-sin piña" "2-sin jamon"')
+                switch (segundocontenido) {
+                    case '1':
+                        alert('su pizza sera una personal hawaiana con salami y sin piña')
+                        break;
+                    case '2':
+                        alert('su pizza sera una personal hawaiana con salami y sin jamon')
+                        break;
+                
+                    default:
+                        alert('por favor introdusca un valor ya sea 1 o 2')
+                        break;
+                }
+                break;
+            case '2':
+                let segundocontenido1 = prompt('desea su pizza personal hawaina con "1-sin piña" "2-sin jamon"')
+                switch (segundocontenido1) {
+                    case '1':
+                        alert('su pizza sera una personal hawaiana sin salami y sin piña')
+                        break;
+                    case '2':
+                        alert('su pizza sera una personal hawaiana sin salami y sin jamon')
+                        break;
+                
+                    default:
+                        alert('por favor introdusca un valor ya sea 1 o 2')
+                        break;
+                }
+                break;
+
+        
+            default:
+                break;
+        
+    
+        }
+    }else if(tipopizza === 'carnes'){
+        let contenidos = prompt('desea su pizza personal de carnes con 1-con salami o 2-sin salami')
+        switch (contenidos) {
+            case '1':
+            let segundocontenido = prompt('desea su pizza personal de carnes con "1-con queso" o "2-sin queso"')
+                switch (segundocontenido) {
+                    case '1':
+                        alert('su pizza sera una personal  de carnes con salami y con queso')
+                        break;
+                    case '2':
+                        alert('su pizza sera una personal  de carnes con salami y sin queso')
+                        break;
+                
+                    default:
+                        alert('por favor ingrese un valor valido ya sea 1 o 2')
+                        break;
+                }
+                break;
+                case '2':
+            let segundocontenido1 = prompt('desea su pizza personal de carnes con "1-con queso" o "2-sin queso"')
+                switch (segundocontenido1) {
+                    case '1':
+                        alert('su pizza sera una personal  de carnes sin salami y con queso')
+                        break;
+                    case '2':
+                        alert('su pizza sera una personal  de carnes sin salami y sin queso')
+                        break;
+                
+                    default:
+                        alert('por favor ingrese un valor valido ya sea 1 o 2')
+                        break;
+                }
+                break;
+        
+        
+            default:
+                alert('por favor introdusca un valor valido')
+                break;
+        }
+    }else{
+        alert('por favor ingresa un valor valido ya sea "carnes" "champiñones" "hawaiana"')
+    }
+}else if(mensaje === 'familiar'){
+    let tipopizza = prompt('que sabor deseas de pizza de "vegetariana",  o "pollo y carne"')
+    if(tipopizza === 'vegetariana'){
+        let contenidos = prompt('desea su pizza vegetariana "1-con queso" o "2-sin queso"')
+        switch (contenidos) {
+            case '1':
+                alert('su pizza sera una familiar vegetariana con queso')
+                break;
+            case '2':
+                alert('su pizza sera una familiar vegetariana sin queso')
+                break;
+        
+        
+            default:
+            alert('por favor introdusca un valor valido ya sea 1 o 2')
+                break;
+        }
+
+    }else if (tipopizza === 'pollo y carne'){
+        let contenidos = prompt('desea su pizza con "1-adicion de salchicha" o "2-adicion de champiñones" o "3-sin ninguno" o "4-con ambos"')
+            switch (contenidos) {
+                case '1':
+                    alert('su pizza familiar sera una de pollo y carne con adicion de salchicha')
+                    break;
+                case '2':
+                    alert('su pizza familiar sera una de pollo y carne con adicion de champiñones')
+                    break;
+                case '3':
+                    alert('su pizza familiar sera una de pollo y carne')
+                    break;
+                case '4':
+                    alert('su pizza familiar sera una de pollo y carne con adicion de champiñones y adicion de salchicha ')
+                    break;
+            
+                default:
+                    alert('por favor introdusca un valor valido ya sea 1, 2, 3 o 4')
+                    break;
+            }
+    }else{
+        alert('por favor ingres un valor valido ya sea "vegetariana" o "pollo y carne""')
+    }
+
+}else if(mensaje === 'mediana'){
+    let tipopizza = prompt('que sabor deseas de pizza de "criolla", o "mexicana"')
+    if(tipopizza === 'criolla'){
+        let contenidos = prompt('desea su pizza con "1-extra carne molida" o "2-con queso"')
+        switch (contenidos) {
+            case '1':
+                let segundocontenido1 = prompt('desea su pizza mediana criolla con "1-nachos" o "2-sin nachos"')
+                switch (segundocontenido1) {
+                    case '1':
+                        alert('su pizza sera una criolla  mediana con extra carne molida y nachos')
+                        break;
+                    case '2':
+                        alert('su pizza sera una criolla  mediana con extra carne molida y sin  nachos')
+                        break;
+                
+                    default:
+                    alert('por favor introdusca un numero valido ya sea 1 o 2')
+                        break;
+                }
+                break;
+            case '2':
+                let segundocontenido2 = prompt('desea su pizza mediana criolla con "1-nachos" o "2-sin nachos"')
+                switch (segundocontenido2) {
+                    case '1':
+                        alert('su pizza sera una criolla mediana de queso con nachos')
+                        break;
+                    case '2':
+                        alert('su pizza sera una criolla mediana de queso sin nachos')
+                        break;
+                
+                    default:
+                        alert('por favor introdusca un valor valido ya sea 1 o 2')
+                        break;
+                }
+                break;
+        
+            default:
+                alert('introdusca un valor valido')
+                break;
+        }
 
 
-if (pizza == 'personal') {
-    alert('escogiste la opcion personal')   
-    let tipos = prompt ('escogue el tipo de pizza que quiere "carnes" "hawaiana" "pollos y champiñones"')
-    if (tipos == 'carnes'){
-        alert('escogiste una pizza personal de carnes')
-        let topins = prompt('deseas la pizza con queso  o cabano o ninguno o salami')
-        if(topins == 'queso'){
-            alert('tu pizza sera una personal de carnes con queso')
+    }else if(tipopizza ==='mexicana'){
+         let contenidos = prompt('desea su pizza con "1-extra guacamole" o "2-sin guacamole"')
+        switch (contenidos) {
+            case '1':
+                let segundocontenido1 = prompt('desea su pizza mediana mexicana con "1-nachos" o "2-sin nachos"')
+                switch (segundocontenido1) {
+                    case '1':
+                        alert('su pizza sera una mexicana mediana con extra guacamole y nachos')
+                        break;
+                    case '2':
+                        alert('su pizza sera una mexicana  mediana con extra extra guacamole y sin  nachos')
+                        break;
+                
+                    default:
+                    alert('por favor introdusca un numero valido ya sea 1 o 2')
+                        break;
+                }
+                break;
+            case '2':
+                let segundocontenido2 = prompt('desea su pizza mediana mexicana con "1-nachos" o "2-sin nachos"')
+                switch (segundocontenido2) {
+                    case '1':
+                        alert('su pizza sera una mexicana mediana sin extra guacamole con nachos')
+                        break;
+                    case '2':
+                        alert('su pizza sera una mexicana mediana sin extra guacamole y sin nachos')
+                        break;
+                
+                    default:
+                        alert('por favor introdusca un valor valido ya sea 1 o 2')
+                        break;
+                }
+                break;
+        
+            default:
+                alert('introdusca un valor valido')
+                break;
         }
-        if (topins == 'cabano'){
-            alert('tu pizza sera una  personal de carnes con canbano')
-        }
-        if (topins == 'salami'){
-            alert('tupizza sera una personal de carnes con salami')
-        }
-        else if(topins == 'ninguno'){
-            alert('tu pizza sera una  personal de carnes sin queso  sin cabano y sin salami')
-        }
-    
+
+
+    }else{
+        alert('por favor ingresa un valor valido ya sea "criolla" o "mexicana"')
     }
-    if(tipos == 'hawaiana'){
-        alert('escogiste una pizza personal hawaina')
-        let topins =prompt('deseas la pizza sin piña o jamon o salami')
-        if (topins == 'jamon'){
-            alert('tu pizza sera una hawaina personal sin piña')
-        }
-        if (topins == 'piña'){
-            alert('su pizza sera una hawaina personal sin jamon')
-        }
-        else if (topins == 'salami'){
-            alert('su pizza sera una hawaina personal sin salami')
-        }
-    }
-    else if(tipos == 'pollos y champiñones'){
-        alert('escogiste una personal de pollos y champiñones')
-        let topins =prompt('deseas la pizza con queso o salsa o con borde de bocadillo ')
-        if (topins == 'salsa'){
-            alert('tu pizza sera una pollos y champiñones personal con salsa')
-        }
-        if (topins == 'queso'){
-            alert('su pizza sera una pollos y champiñones personal con queso')
-        }
-        else if (topins ==  'bordedebocadillo'){
-            alert('su pizza sera una de pollos y champiñones personal con borde de bocadillo')
-        }
-    }
-}
-if (pizza == 'familiar') {
-    alert('escogiste una familiar')
-    let tipos = prompt ('escogue el tipo de pizza que quiere "carnes" "hawaiana" "pollos y champiñon"')
-    if (tipos == 'carnes'){
-        alert('escogiste una pizza familiar de carnes')
-        let topins = prompt('deseas la pizza con queso  o cabano o ninguno o salami')
-        if(topins == 'queso'){
-            alert('tu pizza sera una familiar de carnes con queso')
-        }
-        if (topins == 'cabano'){
-            alert('tu pizza sera una  familiar de carnes con canbano')
-        }
-        if (topins == 'salami'){
-            alert('tupizza sera una  familiar de carnes con salami')
-        }
-        else if(topins == 'ninguno'){
-            alert('tu pizza sera una  familiar de carnes sin queso  sin cabano y sin salami')
-        }
-    
-    }
-    if(tipos == 'hawaiana'){
-        alert('escogiste una pizza familiar hawaina')
-        let topins =prompt('deseas la pizza sin piña o jamon o salami')
-        if (topins == 'jamon'){
-            alert('tu pizza sera una hawaina familiar sin piña')
-        }
-        if (topins == 'piña'){
-            alert('su pizza sera una hawaina familiar sin jamon')
-        }
-        else if (topins == 'salami'){
-            alert('su pizza sera una hawaina familiar sin salami')
-        }
-    }
-    else if(tipos == 'pollos y champiñones'){
-        alert('escogiste una familiar de pollos y champiñones')
-        let topins =prompt('deseas la pizza con queso o salsa o con borde de bocadillo ')
-        if (topins == 'salsa'){
-            alert('tu pizza sera una pollos y champiñones familiar con salsa')
-        }
-        if (topins == 'queso'){
-            alert('su pizza sera una pollos y champiñones familiar con queso')
-        }
-        else if (topins ==  'borde de bocadillo'){
-            alert('su pizza sera una de pollos y champiñones familiar con borde de bocadillo')
-        }
-    }
-}else if(pizza == 'mediana') {
-    alert('escogiste una mediana')  
-    let tipos = prompt ('escogue el tipo de pizza que quiere "carnes" "hawaiana" "pollos y champiñones"')
-    if (tipos == 'carnes'){
-        alert('escogiste una pizza mediana de carnes')
-        let topins = prompt('deseas la pizza con queso  o cabano o ninguno o salami')
-        if(topins == 'queso'){
-            alert('tu pizza sera una mediana de carnes con queso')
-        }
-        if (topins == 'cabano'){
-            alert('tu pizza sera una mediana de carnes con canbano')
-        }
-        if (topins == 'salami'){
-            alert('tu pizza sera una meidana de carnes con salami')
-        }
-        else if(topins == 'ninguno'){
-            alert('tu pizza sera una  mediana de carnes sin queso  sin cabano y sin salami')
-        }
-    
-    }
-    if(tipos == 'hawaiana'){
-        alert('escogiste una pizza mediana hawaina')
-        let topins =prompt('deseas la pizza sin piña o jamon o salami')
-        if (topins == 'jamon'){
-            alert('tu pizza sera una hawaina mediana sin piña')
-        }
-        if (topins == 'piña'){
-            alert('su pizza sera una hawaina mediana sin jamon')
-        }
-        else if (topins == 'salami'){
-            alert('su pizza sera una hawaina mediana sin salami')
-        }
-    }
-    else if(tipos == 'pollos y champiñones'){
-        alert('escogiste una mediana de pollos y champiñones')
-        let topins =prompt('deseas la pizza con queso o salsa o con borde de bocadillo ')
-        if (topins == 'salsa'){
-            alert('tu pizza sera una pollos y champiñones mediana con salsa')
-        }
-        if (topins == 'queso'){
-            alert('su pizza sera una pollos y champiñones mediana con queso')
-        }
-        else if (topins ==  'bordedebocadillo'){
-            alert('su pizza sera una de pollos y champiñones mediana con borde de bocadillo')
-        }
-    }
-}   
-else {
-    alert('es invalida tu petición')
+}else{
+    alert('por favor ingesa un valor ya sea "familiar", "personal" o "mediana"')
 }
